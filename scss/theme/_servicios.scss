@@ -1,0 +1,57 @@
+/* Nuestros Servicios */
+.main-servicios{
+    width: 100%;
+    &__title{
+        font-size: 2rem;
+        padding: 10px;
+        text-align: center;
+        font-family: $banner;
+        color: $title-color;
+    }
+    &__texto{
+        text-align: center;
+    }
+    &__container{
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+    }
+    &__caja{
+        background-color: $primary;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        &:hover{
+            box-shadow: 0px 0px 5px 3px $secondary;
+            animation: 1s chicle 1;
+        }
+    }
+}
+/* Animación chicle */
+@keyframes chicle {
+    30% {
+        transform:
+            scaleX(1.25) scaleY(0.75);
+    }
+    50% {
+        transform:
+            scaleX(0.75) scaleY(1.25);
+    }
+    60% {
+        transform:
+        scaleX(1.15) scaleY(0.85);
+    }
+}
+/* Pantalla 1280px */
+@media screen and (min-width: 1280px){
+    .main-servicios{
+        &__container{
+            justify-content: center;
+        }
+        &__caja{
+            width: 23%;
+        }
+    }
+}

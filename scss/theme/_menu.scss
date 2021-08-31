@@ -1,0 +1,148 @@
+/*Menu*/
+.main-menu {
+    display: none;
+    &__ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__li{
+        width: 100%;
+        padding: 10px 5px;
+        list-style: none;
+        &:nth-child(6){
+            margin: 25px;
+        }
+    }
+    &__link{
+        color: $color;
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 1.3em;
+        &__es,
+        &__eu{
+            padding: 15px;
+            text-decoration: none;
+            background-color: $secondary;
+            color: $title-color;
+            font-weight: bold;
+            border: 2px solid $secondary;
+        }
+        &__es{
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        &__eu{
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: transparent;
+        }
+    }
+    &__btnMenu{
+        width: 30px;
+        position: absolute;
+        right: 20px;
+        top: 35px;
+        cursor: pointer;
+        height: 20px;
+        &__a{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__linea{
+            height: 3px;
+            background-color: $title-color;
+            opacity: 1;
+            transform: translateY(0) rotate(0);
+            transition: all 0.3s;
+        }
+    }
+}
+/* No muestro hablemos en movil*/
+.main-menu__boton{
+    display: none;
+}
+/* Efectos menu */
+.main-menu__abierto .main-menu__btnMenu__linea:nth-child(2){
+    opacity: 0;
+}
+.main-menu__abierto .main-menu__btnMenu__linea:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    
+}
+.main-menu__abierto .main-menu__btnMenu__linea:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Pantalla 950px */
+@media screen and (min-width: 950px) {
+    /* Logo */
+    .main-logo{
+        animation: 1.5s giroY 1;
+    }
+    /* Animación Logo */
+    @keyframes giroY{
+        0%{
+            opacity: 0.5;
+            transform: perspective(200px)
+                        rotateY(90deg);
+        }
+        40%{
+            transform: perspective(200px)
+                        rotateY(-20deg);
+        }
+        70%{
+            transform: perspective(200px)
+                        rotateY(20deg);
+        }
+    }
+}
+/* Pantalla 1280 */
+@media screen and (min-width: 1280px){
+    /* Menu */
+    .main-menu,
+    .main-menu__ul{
+        display: flex;
+        align-items: center;
+        &__btnMenu{
+            display: none;
+        }
+        &__li{
+            &:nth-child(6){
+                margin-left: 50px;
+            }
+        }
+        &__link,
+        &__boton{
+            padding: 15px;
+            text-decoration: none;
+            color: $color;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        &__link:hover{
+            border-bottom: 3px solid $secondary;
+        }
+        &__boton{
+            background-color: $secondary;
+            border: 2px solid $secondary;
+            padding: 15px 10px;
+            border-radius: 15px;
+            display: flex;
+            margin-left: 50px;
+            color: $title-color;
+            transition-duration: .5s;
+            align-items: center;
+            &__i{
+                font-size: 1.8rem;
+                margin-right: 15px;
+            }
+            &:hover{
+                background-color: transparent;
+                transition-duration: .5s;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+// Fuentes
+
+/*Fuentes*/
+/* Logo*/
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+/* banner*/
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+/* body*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+// Variable
+    // Letras
+$logo: 'Stick', sans-serif;
+$letra: 'Raleway', sans-serif;
+$banner: 'Londrina Solid', cursive;
+    // Colores
+$primary: #212e36;
+$secondary: #1192ee;
+$background: #192229;
+$color: #a8afb3;
+$title-color: #ffffff;
+
+    // Tamaños
+$max-width: 1280px;
+
+// Estilos
+@import "base/body";
+@import "theme/header";
+@import "theme/menu";
+@import "theme/main";
+@import "theme/planes";
+@import "theme/servicios";
+@import "theme/footer";

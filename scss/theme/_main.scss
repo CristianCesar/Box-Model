@@ -1,0 +1,369 @@
+/* Banner*/
+.main-banner,
+.main-bannerSection,
+.main-caracteristicas {
+    width: 100%;
+    padding: 0;
+    padding-top: 25px;
+    background-color: rgba(17, 146, 238, .4);
+    margin-bottom: 50px;
+}
+
+.main-banner__container,
+.main-bannerSection__container,
+.main-elegirnos__container,
+.main-servicios__container,
+.main-caracteristicas__container,
+.main-trabajos__container{
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+.main-banner__boxContainer,
+.main-bannerSection__boxContainer,
+.main-elegirnos,
+.main-servicios{
+    width: 100%;
+}
+
+.main-banner__title,
+.main-caracteristicas__title{
+    margin: 0;
+    padding: 10px;
+    font-size: 2rem;
+    color: $title-color;
+    font-family: $banner;
+}
+
+.main-banner__texto,
+.main-caracteristicas__texto{
+    padding: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.main-banner__boton,
+.main-caracteristicas__boton {
+    text-decoration: none;
+    color: $title-color;
+    background-color: $secondary;
+    border: 2px solid $secondary;
+    padding: 15px 10px;
+    border-radius: 7px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px;
+    transition-duration: .5s;
+}
+
+.main-banner__boton:hover,
+.main-caracteristicas__boton:hover {
+    background-color: transparent;
+    transition-duration: .5s;
+}
+
+.main-banner__figure,
+.main-banner__img,
+.main-caracteristicas__figure,
+.main-caracteristicas__img,
+.main-elegirnos__figure,
+.main-elegirnos__img,
+.main-caracteristicas__figure,
+.main-caracteristicas__img{
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+}
+/* Animación Banner */
+.main-banner__container{
+    animation: 1s veloz 1;
+}
+@keyframes veloz{
+    0%{
+        opacity: 0;
+        transform: translateX(-200%)
+                   skewX(40deg);
+    }
+    60%{
+        opacity: 1;
+        transform: translateX(-20%)
+                   skewX(-40deg);
+    }
+    80%{
+        transform: translateX(0%)
+                   skewX(15deg);
+    }
+}
+/* Por que elegirnos */
+
+.main-elegirnos__acordeon__container,
+.main-servicios__container{
+    padding: 10px;
+}
+
+.main-elegirnos__texto,
+.main-servicios__texto{
+    font-size: 1.3rem;
+    padding: 10px;
+    text-align: justify;
+}
+
+.main-elegirnos__title,
+.main-elegirnos__acordeon__title,
+.main-servicios__title{
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+    font-family: $banner;
+    color: $title-color;
+}
+.main-elegirnos__title::after{
+    content: " 🚀";
+    font-size: 1.5rem;
+}
+.main-elegirnos__acordeon__title::after{
+    content: " 💪";
+    font-size: 1.5rem;
+}
+.main-elegirnos__acordeon__box{
+    margin: 5px auto;
+    cursor: pointer;
+}
+.main-elegirnos__acordeon__box p{
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.main-elegirnos__acordeon__box summary{
+    background-color: $primary;
+    padding: 15px;
+    border-left: 3px solid $secondary;
+    font-weight: bold;
+    list-style-type: none;
+    font-size: 1.4rem;
+}
+/* Nuestros Servicios */
+
+.main-servicios__caja:hover{
+    box-shadow: 0px 0px 5px 3px $secondary;
+    animation: 1s chicle 1;
+}
+@keyframes chicle {
+    30% {
+        transform:
+            scaleX(1.25) scaleY(0.75);
+    }
+    50% {
+        transform:
+            scaleX(0.75) scaleY(1.25);
+    }
+    60% {
+        transform:
+        scaleX(1.15) scaleY(0.85);
+    }
+}
+.main-servicios__figure{
+    width: 90px;
+    height: 90px;
+}
+.main-servicios__img{
+    width: 100%;
+}
+.main-caracteristicas__li{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.main-caracteristicas__li::before,
+.main-elegirnos__acordeon__box summary::before{
+    content: "👉 ";
+    font-size: 1.3rem;
+}
+/*Footer*/
+
+.main-caracteristicas__ul {
+    margin: 15px 0;
+    padding: 0;
+    position: relative;
+}
+.main-caracteristicas__li {
+    padding: 15px;
+    list-style: none;
+    margin: 0;
+}
+.main-footer__title {
+    color: $title-color;
+    font-size: 1.5rem;
+    font-family: $banner;
+}
+
+/* Páginas internas */
+/*banner*/
+
+.main-bannerSection__boxContainer {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Trabajos */
+.main-trabajos{
+    width: 100%;
+}
+/* Galeria de imagenes con GRID*/
+.galeria-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 15px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+.galeria-grid__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Pantalla 736px*/
+@media screen and (min-width: 736px) {
+    
+    /* Banner */
+    .main-banner__container,
+    .main-elegirnos__acordeon,
+    .main-caracteristicas__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .main-banner__texto {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .main-banner__boton,
+    .main-caracteristicas__boton {
+        font-size: 1.2rem;
+    }
+    /* Por que elegirnos */
+    .main-elegirnos__acordeon__container{
+        width: 50%;
+    }
+    .main-elegirnos__figure,
+    .main-elegirnos__img{
+        width: 300px;
+    }
+    /* Nuestros servicios*/
+    .main-servicios__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-servicios__caja{
+       width: 43%;
+       margin: 10px auto;
+    }
+    .main-elegirnos__texto{
+        text-align: center;
+    }
+    /* Trabajos */
+    .galeria-grid{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 5vw);
+        grid-gap: 15px;
+        margin-bottom: 25px;
+    }
+    .galeria-grid__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .galeria-grid__item--1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .galeria-grid__item--2{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .galeria-grid__item--3{
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+    .galeria-grid__item--4{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 6;
+    }
+    .galeria-grid__item--5{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 9;
+    }
+    .galeria-grid__item--6{
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 6;
+        grid-row-end: 9;
+    }
+}
+/* Pantalla 950px */
+@media screen and (min-width: 950px) {
+    
+    /* Banner */
+    .main-banner__title,
+    .main-elegirnos__title,
+    .main-caracteristicas__title {
+        font-size: 2.4rem;
+    }
+    
+    
+    .main-banner__texto,
+    .main-caracteristicas__texto {
+        font-size: 1.6rem;
+    }
+    
+    .main-banner__boton,
+    .main-caracteristicas__boton {
+        font-size: 1.5rem;
+    }
+    /* Por que elegirnos */
+    .main-elegirnos__title::after,
+    .main-elegirnos__acordeon__title::after{
+        font-size: 2.4rem;
+    }
+    .main-elegirnos__figure,
+    .main-elegirnos__img{
+        width: 400px;
+    }
+    .main-elegirnos__acordeon__box p{
+        font-size: 1.2rem;
+    }
+    .main-elegirnos__acordeon__box summary{
+        font-size: 1.2em;
+    }
+}
+
+/* Pantalla 1280px */
+@media screen and (min-width: 1280px) {
+
+/* Caracteristicas */
+.main-caracteristicas__li{
+    font-size: 1.4rem;
+}
+
+/* Nuestros servicios*/
+.main-servicios__caja{
+    width: 30%;
+ }
+}
