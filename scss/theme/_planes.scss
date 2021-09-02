@@ -14,6 +14,8 @@
         display: flex;
 		justify-content: space-between;
 		align-items: center;
+		border-top-left-radius: 30px;
+		border-bottom-right-radius: 30px;
         padding: 15px;
 		transition: all .5s;
         &:hover{
@@ -26,15 +28,18 @@
 		}
 	}
 	&__icon{
-		font-size: 1.5rem;
 		background-color: $secondary;
-		padding: 10px;
 		width: 57px;
-		text-align: center;
 		height: 57px;
-		color: $title-color;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		border-radius: 50%;
 		border: 4px solid $primary;
+		i{
+			font-size: 1.5rem;
+			color: $title-color;
+		}
 	}
 	&__title,
 	&__titlePrincipal{
@@ -72,14 +77,15 @@
 			background-color: rgba($color: #111010, $alpha: .2);
 		}
 		&:nth-child(3){
+			margin-top: 65px;
 			&::before{
-				width: 90.5%;
+				width: 91.5%;
 				padding: 15px;
 				background-color: $secondary;
 				position: absolute;
 				top: -45px;
 				left: -2px;
-				content: " Mejor valor";
+				content: "Mejor valor";
 				color: $title-color;
 				font-weight: bold;
 				text-align: center;
@@ -89,7 +95,7 @@
 		}
 	}
 	&__h3{
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 		font-family: $banner;
 		text-align: center;
 		margin: 10px 0;
@@ -99,21 +105,22 @@
 	}
 	&__precio{
 		text-align: center;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		margin: 20px 0;
+		padding: 15px;
 		position: relative;
 		font-weight: bolder;
 		&::before{
 			content: "A solo";
 			position: absolute;
 			font-size: 0.9rem;
-			top: -13px;
+			top: 0px;
 		}
 		&::after{
 			content: "/mes";
 			position: absolute;
 			font-size: 0.9rem;
-			top: 7px;
+			top: 30px;
 		}
 	}
 	&__boton{
@@ -161,6 +168,11 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
+		}
+		&__box{
+			&:nth-child(3){
+				margin-top: 10px;
+			}
 		}
 	}
 }
