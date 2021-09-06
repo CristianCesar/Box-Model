@@ -97,6 +97,7 @@ body {
 /*Menu*/
 .main-menu {
   display: none;
+  overflow: hidden;
 }
 .main-menu__ul {
   list-style: none;
@@ -167,6 +168,16 @@ body {
 
 /* No muestro hablemos en movil*/
 .main-menu__boton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 2rem;
+  background-color: #075E54;
+  border-radius: 50%;
+  padding: 7px 12px;
+}
+.main-menu__boton span {
   display: none;
 }
 
@@ -267,6 +278,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: inherit;
     margin-left: 50px;
     color: #ffffff;
     -webkit-transition-duration: 0.5s;
@@ -286,6 +298,10 @@ body {
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
   }
+  .main-menu__boton span,
+.main-menu__ul__boton span {
+    display: block;
+  }
 }
 /* Banner*/
 .main-banner,
@@ -296,6 +312,7 @@ body {
   padding-top: 25px;
   background-color: rgba(17, 146, 238, 0.4);
   margin-bottom: 50px;
+  overflow: hidden;
 }
 
 .main-banner__container,
@@ -1045,9 +1062,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1069,8 +1090,8 @@ body {
 }
 .main-detalles__icon {
   background-color: #1192ee;
-  width: 57px;
-  height: 57px;
+  width: 100px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1084,7 +1105,7 @@ body {
   border: 4px solid #212e36;
 }
 .main-detalles__icon i {
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: #ffffff;
 }
 .main-detalles__title, .main-detalles__titlePrincipal {
@@ -1120,23 +1141,6 @@ body {
 }
 .main-planes__box:hover {
   background-color: rgba(17, 16, 16, 0.2);
-}
-.main-planes__box:nth-child(3) {
-  margin-top: 65px;
-}
-.main-planes__box:nth-child(3)::before {
-  width: 91.5%;
-  padding: 15px;
-  background-color: #1192ee;
-  position: absolute;
-  top: -45px;
-  left: -2px;
-  content: "Mejor valor";
-  color: #ffffff;
-  font-weight: bold;
-  text-align: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 .main-planes__h3 {
   font-size: 1.7rem;
@@ -1240,6 +1244,7 @@ body {
 /* Nuestros Servicios */
 .main-servicios {
   width: 100%;
+  overflow: hidden;
 }
 .main-servicios__title {
   font-size: 2rem;
