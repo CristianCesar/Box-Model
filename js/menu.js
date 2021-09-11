@@ -32,14 +32,31 @@ $("#btnServidores").click(function(){
   if(window.matchMedia("(max-width:950px)").matches){
       $("#btnServidores").after($("#servidores").slideToggle("fast"))
   }else{
-      $(".main-menu").after($("#servidores").slideToggle("fast"))
+      $(".box-menu").after($("#servidores").slideToggle("fast"))
   }
 })
 // HOSTING
 $("#btnHosting").click(function(){
-  if(window.matchMedia("(max-width:950px)").matches){
+  if(window.matchMedia("(max-width:1280px)").matches){
       $("#btnHosting").after($("#hosting").slideToggle("fast"))
   }else{
       $(".main-menu").after($("#hosting").slideToggle("fast"))
+  }
+})
+
+// STREAMING
+$("#btnStreaming").click(function(){
+  if(window.matchMedia("(max-width:1280px)").matches){
+      $("#btnStreaming").after($("#streaming").slideToggle("fast"))
+  }else{
+      $(".main-menu").after($("#streaming").slideToggle("fast"))
+  }
+})
+// MEDIOS
+$("#btnMedios").click(function(){
+  if(window.matchMedia("(max-width:1280px)").matches){
+      $("#btnMedios").after($("#medios").slideToggle("fast"))
+  }else{
+      $(".main-menu").after($("#medios").slideToggle("fast"))
   }
 })

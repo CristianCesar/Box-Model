@@ -117,6 +117,7 @@ body {
   text-decoration: none;
   font-weight: bolder;
   font-size: 1.3em;
+  white-space: nowrap;
 }
 .main-menu__link__es, .main-menu__link__eu {
   padding: 15px;
@@ -164,6 +165,28 @@ body {
           transform: translateY(0) rotate(0);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.box-menu {
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+}
+.box-menu__link {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.box-menu__icon, .box-menu__p {
+  display: none;
+}
+.box-menu__title {
+  color: #a8afb3;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
 /* No muestro hablemos en movil*/
@@ -244,6 +267,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: visible;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -301,6 +325,68 @@ body {
   .main-menu__boton span,
 .main-menu__ul__boton span {
     display: block;
+  }
+
+  .box-menu {
+    position: absolute;
+    background-color: #192229;
+    top: 89px;
+    z-index: 1025;
+    left: 0;
+    right: 0;
+    width: 800px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .box-menu__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .box-menu__items {
+    margin: 15px;
+  }
+  .box-menu__link {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 300px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .box-menu__icon {
+    display: block;
+    font-size: 1.4rem;
+    color: #a8afb3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 7px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .box-menu__title {
+    margin: 0;
+  }
+  .box-menu__p {
+    display: block;
+    color: #ffffff;
+    width: 100%;
+    font-size: 0.7rem;
   }
 }
 /* Banner*/
@@ -1221,9 +1307,8 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .main-planes__box:nth-child(3) {
     margin-top: 10px;
@@ -1237,7 +1322,7 @@ body {
 /* Pantalla 1280px*/
 @media screen and (min-width: 1280px) {
   .main-planes__box {
-    width: 24%;
+    width: 27%;
     margin: 10px 6px;
   }
 }
@@ -1398,5 +1483,92 @@ body {
   }
   .main-footer__caja {
     width: 33%;
+  }
+}
+.main-desarrollo {
+  width: 100%;
+  margin: 0;
+}
+.main-desarrollo__container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-desarrollo__boxContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main-desarrollo__boxContainer__order {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.main-desarrollo__figure {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+.main-desarrollo__img {
+  width: 100%;
+}
+.main-desarrollo__title {
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  font-family: "Londrina Solid", cursive;
+}
+.main-desarrollo__texto {
+  padding: 10px;
+  text-align: justify;
+}
+.main-desarrollo__ul {
+  margin: 0;
+  padding: 0;
+}
+.main-desarrollo__li {
+  padding: 10px;
+  list-style: none;
+}
+.main-desarrollo__li::before {
+  content: "👉 ";
+}
+
+@media screen and (min-width: 736px) {
+  .main-desarrollo__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-desarrollo__title {
+    font-size: 2rem;
+  }
+  .main-desarrollo__texto {
+    font-size: 1.5rem;
+  }
+  .main-desarrollo__li {
+    font-size: 1.3rem;
   }
 }

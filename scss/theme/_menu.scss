@@ -20,6 +20,7 @@
         text-decoration: none;
         font-weight: bolder;
         font-size: 1.3em;
+        white-space: nowrap;
         &__es,
         &__eu{
             padding: 15px;
@@ -59,6 +60,27 @@
             transform: translateY(0) rotate(0);
             transition: all 0.3s;
         }
+    }
+}
+// Caja Hosting
+// Box Menu Desplegable
+.box-menu{
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    &__link{
+        text-decoration: none;
+        display: flex;
+    }
+    &__icon, &__p{
+        display: none;
+    }
+    &__title{
+        color: $color;
+        font-size: 1.1rem;
+        font-weight: normal;
+        margin-top: 15px;
+        margin-left: 10px;
     }
 }
 /* No muestro hablemos en movil*/
@@ -116,6 +138,7 @@
     .main-menu,
     .main-menu__ul{
         display: flex;
+        overflow: visible;
         align-items: center;
         &__btnMenu{
             display: none;
@@ -158,6 +181,50 @@
             span{
                 display: block;
             }
+        }
+    }
+    .box-menu{
+        position: absolute;
+        background-color: $background;
+        top: 89px;
+        z-index: 1025;
+        left: 0;
+        right: 0;
+        width: 800px;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 80%);
+        justify-content: space-between;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        &__container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__items{
+            margin: 15px;
+        }
+        &__link{
+            flex-wrap: wrap;
+            width: 300px;
+            align-items: center;
+        }
+        &__icon{
+            display: block;
+            font-size: 1.4rem;
+            color: $color;
+            display: flex;
+            padding: 7px;
+            justify-content: center;
+            align-items: center;
+        }
+        &__title{
+            margin: 0;
+        }
+        &__p{
+            display: block;
+            color: $title-color;
+            width: 100%;
+            font-size: 0.7rem;
         }
     }
 }

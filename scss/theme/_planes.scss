@@ -151,7 +151,7 @@
 		&__container{
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: center;
+			justify-content: space-around;
 		}
 		&__box{
 			&:nth-child(3){
@@ -174,7 +174,7 @@
 	// Planes Hosting
 	.main-planes{
 		&__box{
-			width: 24%;
+			width: 27%;
 			margin: 10px 6px;
 		}
 	}
