@@ -32,6 +32,7 @@
         font-size: 1.2rem;
         padding: 10px;
         font-weight: bold;
+        text-align: justify;
         color: $title-color;
     }
 }
@@ -84,6 +85,8 @@
     .main-banco{
         &__container{
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         &__caja{
             width: 50%;

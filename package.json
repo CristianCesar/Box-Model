@@ -1,7 +1,7 @@
 {
-  "name": "sitio-web",
+  "name": "Box Model - Agencia de desarrollo web, planes de web hosting, radio streaming y mas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Somos una Agencia, ubicado en Buenos Aires Argentina, que brinda servicios de diseño de páginas web, desarrollo de tiendas online Ecommerce, alojamiento web hosting, radio streaming, app android para radios y mantenimiento web para wordpress",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

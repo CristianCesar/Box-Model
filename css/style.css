@@ -1600,6 +1600,7 @@ body {
   font-size: 1.2rem;
   padding: 10px;
   font-weight: bold;
+  text-align: justify;
   color: #ffffff;
 }
 
@@ -1652,6 +1653,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main-banco__caja {
     width: 50%;
