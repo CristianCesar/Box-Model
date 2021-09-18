@@ -17,6 +17,7 @@
         width: 100%;
         margin: 0;
         padding: 15px;
+        text-align: center;
     }    
     &__img{
         width: 100%;
@@ -42,6 +43,24 @@
         list-style: none;
         &::before{
             content: "👉 ";
+        }
+    }
+    &__boton{
+        text-decoration: none;
+        color: $title-color;
+        background-color: $secondary;
+        border: 2px solid $secondary;
+        padding: 15px 10px;
+        border-radius: 7px;
+        position: relative;
+        top: 25px;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 15px;
+        transition-duration: .5s;
+        &:hover{
+            background-color: transparent;
+            transition-duration: .5s;
         }
     }
 }

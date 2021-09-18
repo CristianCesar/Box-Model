@@ -1507,6 +1507,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 15px;
+  text-align: center;
 }
 .main-desarrollo__img {
   width: 100%;
@@ -1533,6 +1534,26 @@ body {
 }
 .main-desarrollo__li::before {
   content: "👉 ";
+}
+.main-desarrollo__boton {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #1192ee;
+  border: 2px solid #1192ee;
+  padding: 15px 10px;
+  border-radius: 7px;
+  position: relative;
+  top: 25px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 15px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.main-desarrollo__boton:hover {
+  background-color: transparent;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 @media screen and (min-width: 736px) {
@@ -1572,6 +1593,7 @@ body {
   padding: 10px;
   text-align: center;
   font-size: 2rem;
+  width: 100%;
   font-family: "Londrina Solid", cursive;
   color: #ffffff;
 }
@@ -1599,8 +1621,8 @@ body {
 .main-banco__p {
   font-size: 1.2rem;
   padding: 10px;
+  text-align: center;
   font-weight: bold;
-  text-align: justify;
   color: #ffffff;
 }
 

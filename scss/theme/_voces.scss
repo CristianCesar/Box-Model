@@ -10,6 +10,7 @@
         padding: 10px;
         text-align: center;
         font-size: 2rem;
+        width: 100%;
         font-family: $banner;
         color: $title-color;
     }
@@ -31,8 +32,8 @@
     &__p{
         font-size: 1.2rem;
         padding: 10px;
+        text-align: center;
         font-weight: bold;
-        text-align: justify;
         color: $title-color;
     }
 }
