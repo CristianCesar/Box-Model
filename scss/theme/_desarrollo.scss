@@ -1,6 +1,7 @@
 .main-desarrollo{
     width: 100%;
     margin: 0;
+    margin-bottom: 65px;
     &__container{
         width: 100%;
         max-width: $max-width;
@@ -52,9 +53,9 @@
         border: 2px solid $secondary;
         padding: 15px 10px;
         border-radius: 7px;
-        position: relative;
-        top: 25px;
         font-size: 1.5em;
+        position: relative;
+        top: 35px;
         font-weight: bold;
         margin: 15px;
         transition-duration: .5s;
